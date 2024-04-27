@@ -12,18 +12,15 @@ function App() {
 
         <h3>{`${people.length} birthdays today`}</h3>
         {people.map((person)=>{
-           const{id,name,age,image}=person
+    
+         
            return(
-             <div className='person' key={id}>
-            <img src={image} alt="Profile Photo" />
-            <h4>{name}</h4>
-            <p>{age}</p>
-           </div>
+         
+           <List {...person}/>
            )
         })}
         <button onClick={clearList}>CLEAR LIST</button>
     </div>
-
   </>;
 }
 
